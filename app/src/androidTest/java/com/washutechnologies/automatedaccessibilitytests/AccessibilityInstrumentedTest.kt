@@ -1,9 +1,11 @@
 package com.washutechnologies.automatedaccessibilitytests
 
-import androidx.test.espresso.Espresso.onView
+import androidx.test.espresso.Espresso
+import androidx.test.espresso.accessibility.AccessibilityChecks
 import androidx.test.espresso.action.ViewActions
-import androidx.test.espresso.matcher.ViewMatchers.withId
+import androidx.test.espresso.matcher.ViewMatchers
 import androidx.test.rule.ActivityTestRule
+import org.junit.BeforeClass
 import org.junit.Rule
 import org.junit.Test
 
@@ -12,13 +14,20 @@ import org.junit.Test
  *
  * See [testing documentation](http://d.android.com/tools/testing).
  */
-class ExampleInstrumentedTest {
+class AccessibilityInstrumentedTest {
+    companion object {
+        @BeforeClass
+        @JvmStatic
+        fun enableAccessibilityChecks() {
+            AccessibilityChecks.enable()
+        }
+    }
 
     @get:Rule
     var activityRule: ActivityTestRule<MainActivity> = ActivityTestRule(MainActivity::class.java)
 
     @Test
     fun buttonWithIdCanBeClicked() {
-        onView(withId(R.id.helloButton)).perform(ViewActions.click())
+        Espresso.onView(ViewMatchers.withId(R.id.helloButton)).perform(ViewActions.click())
     }
 }
