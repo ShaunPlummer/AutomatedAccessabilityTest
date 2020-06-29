@@ -28,6 +28,6 @@ class AccessibilityInstrumentedTest {
 
     @Test
     fun buttonWithIdCanBeClicked() {
-        Espresso.onView(ViewMatchers.withId(R.id.helloButton)).perform(ViewActions.click())
+        Espresso.onView(ViewMatchers.withId(R.id.cardEndIcon)).perform(ViewActions.click())
     }
 }

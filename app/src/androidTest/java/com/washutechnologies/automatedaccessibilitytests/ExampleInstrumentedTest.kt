@@ -19,6 +19,6 @@ class ExampleInstrumentedTest {
 
     @Test
     fun buttonWithIdCanBeClicked() {
-        onView(withId(R.id.helloButton)).perform(ViewActions.click())
+        onView(withId(R.id.cardEndIcon)).perform(ViewActions.click())
     }
 }
