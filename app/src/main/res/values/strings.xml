@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">AutomatedAccessibilityTests</string>
+    <string name="hello">Hello World!</string>
 </resources>
