@@ -8,9 +8,12 @@ import org.junit.Rule
 import org.junit.Test
 
 /**
- * Instrumented test, which will execute on an Android device.
+ * A simple Instrumented test, which will execute on an Android device, checking that the user
+ * is able to click an on screen button. No accessibility checks are performed.
  *
  * See [testing documentation](http://d.android.com/tools/testing).
+ *
+ * * Note test classes must be run individually.
  */
 class ExampleInstrumentedTest {
 
