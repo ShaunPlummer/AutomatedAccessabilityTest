@@ -30,6 +30,7 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
+        <!-- match view size to spec  https://material.io/components/lists#specs -->
         <ImageButton
             android:id="@+id/cardEndIcon"
             android:layout_width="24dp"
